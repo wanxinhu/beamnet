@@ -1,0 +1,9 @@
+# Python 3.8+ and a CUDA-compatible PyTorch build when using a GPU
+torch>=2.0
+torchvision>=0.15
+numpy<2.0
+opencv-python
+pillow
+scikit-learn
+# Optional: if installed, the decoder uses timm's initialization helpers
+timm==0.6.12
