@@ -1,4 +1,4 @@
-utils/dataloader_retina.pyutils/data.py# BEAM-Net 发布前检查稿
+# BEAM-Net 发布前检查稿
 
 ## 代码来源与差异
 
@@ -10,7 +10,7 @@ utils/dataloader_retina.pyutils/data.py# BEAM-Net 发布前检查稿
 
 ## 论文与实现对应关系
 
-- 绿色通道/CLAHE 与三通道输入：`utils/dataloader_retina.py`。
+- 绿色通道/CLAHE 与三通道输入：`utils/data.py`。
 - ResNet-34 五级特征：`lib/resnet.py`，使用标准卷积。
 - AS-MSCB 与 SKU：`lib/decoders.py` 的 `AsymmetricDWConv`、`MSDC`、`MSCB`。
 - RMSAB/GRAB：`lib/decoders.py` 的瓶颈路径与 `use_grab` 开关。
@@ -35,11 +35,10 @@ utils/dataloader_retina.pyutils/data.py# BEAM-Net 发布前检查稿
 
 ## 当前状态
 
-这是给作者检查的本地构建稿，尚未创建 GitHub 仓库、提交远程分支或发布归档。
+这是给作者检查并已发布到 GitHub 的构建稿；公开仓库不包含数据集、权重、日志或结果表。
 
 ## 验证记录
 
 - `python -m compileall -q beamnet`：通过。
 - CPU 前向测试通过，五个预测头均输出与输入相同的空间尺寸；解码器对 `timm` 只作可选兼容导入。
 - 当前工作环境缺少 `albumentations` 与 `medpy`，因此使用了项目内的轻量数据加载和评估实现。
-
